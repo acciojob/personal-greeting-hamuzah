@@ -13,8 +13,8 @@ const Child = () => {
     return (
         <div>
          <form onSubmit={handleSubmit}>
-            <lable>
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)} /></lable>
+            <lable>Enter Your Name:</lable>
+            <input type="text" value={name} onChange={(e) => setName(e.target.value)} /> 
             <button type="submit">Submit</button>
             <p>{greeting}</p>
          </form>
