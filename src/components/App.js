@@ -1,15 +1,30 @@
+import React, { useState } from 'reacteact';
 
-import React from "react";
-import './../styles/App.css';
-import Child from "./Child";
+function GreetingComponent() {
+  const [name, setName] = useState('');
+  const [greeting, setGreeting] = useState('');
 
-const App = () => {
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setGreeting(`Hello, ${name}!`);
+  };
+
   return (
     <div>
-        {/* Do not remove the main div */}
-        <Child />
+      <form onSubmit={handleSubmit}>
+        <label>
+          Enter your name:
+          <input type="text" value={name} onChange={handleNameChange} />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+      <p>{greeting}</p>
     </div>
-  )
+  );
 }
 
-export default App
+export default GreetingComponent;

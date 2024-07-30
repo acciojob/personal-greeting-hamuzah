@@ -1,7 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./components/App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import GreetingComponent from './GreetingComponent';
 
-
-
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <React.StrictMode>
+    <GreetingComponent />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
