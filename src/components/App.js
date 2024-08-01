@@ -3,14 +3,18 @@ import './../styles/App.css';
 
 const App = () => {
 
-  const [name, setName] = useState("");
+  const[userName, setUserName] = useState('')
+  
   return (
-    <div>
-        <p>Enter your name:</p>
-        <input onChange={(e) => setName(e.target.value)}></input>
-        <p>Hello {name}!</p>
+    <div className="App">
+      <h1>Enter Your Name:</h1>
+      <input type="text" onChange={(e)=>setUserName(e.target.value)}/>
+         
+        <p>Hello {userName}!</p> {/* display the greeting with the entered name */}
+     
+      
     </div>
-  )
+  );
 }
 
 export default App
